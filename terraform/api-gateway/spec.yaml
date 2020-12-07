@@ -1,0 +1,19 @@
+swagger: '2.0'
+info:
+  title: api-gateway
+  description: API Gateway
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /v1/hello:
+    get:
+      summary: Hi Service
+      operationId: hello-v1
+      x-google-backend:
+        address: <CLOUD_RUN_URL> # You need to change this!
+      responses:
+        '200':
+          description: OK
